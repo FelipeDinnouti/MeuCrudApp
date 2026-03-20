@@ -1,0 +1,16 @@
+{
+    "people": [
+        {
+            "id" : 1,
+            "firstname": "João",
+            "lastname": "Silva",
+            "email": "joao@email.com"
+        },
+        {
+            "id" : 2,
+            "firstname": "Rafael",
+            "lastname": "Cruz",
+            "email": "taunsa@email.com"
+        }
+    ]
+}
