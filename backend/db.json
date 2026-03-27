@@ -1,16 +1,20 @@
 {
-    "people": [
-        {
-            "id" : 1,
-            "firstname": "João",
-            "lastname": "Silva",
-            "email": "joao@email.com"
-        },
-        {
-            "id" : 2,
-            "firstname": "Rafael",
-            "lastname": "Cruz",
-            "email": "taunsa@email.com"
-        }
-    ]
+  "people": [
+    {
+      "id": "1",
+      "firstName": "João",
+      "lastName": "Silva",
+      "email": "joao@email.com",
+      "phone": "11999999999",
+      "birthDate": "1990-01-01T12:00:00.000Z"
+    },
+    {
+      "id": "2",
+      "firstName": "Rafael",
+      "lastName": "Cruz",
+      "email": "taunsa@email.com",
+      "phone": "11888888888",
+      "birthDate": "1995-05-15T12:00:00.000Z"
+    }
+  ]
 }

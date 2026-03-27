@@ -1,35 +1,49 @@
-import React, { useEffect, useState } from "react";
-import { View, Text, FlatList, Button } from "react-native";
+import React, { useEffect, useState, useCallback } from "react";
+import { View, Text, FlatList, Button, StyleSheet } from "react-native";
+import { useFocusEffect } from '@react-navigation/native';
 
 import styles from "../styles/styles";
-
-import { getPeople, deletePerson } from "../server/peopleCrud";
+import { getPeople } from "../servers/peopleCrud";
+import { CardPersonal } from "../components/cardPersonal";
 
 export default function HomeScreen({ navigation }){
     const [people, setPeople] = useState([]);
 
     async function loadPeople() {
-        const data = await getPeople();
-        setPeople(data);
+        try {
+            const data = await getPeople();
+            setPeople(data);
+        } catch (error) {
+            console.error("Error loading people:", error);
+        }
     }
 
-    useEffect(() => {
-        loadPeople();
-    }, [])
+    useFocusEffect(
+        useCallback(() => {
+            loadPeople();
+        }, [])
+    );
 
     return (
         <View style={styles.container}>
             <Text style={styles.title}>Pessoas</Text>
 
             <Button 
-            title = "Adicionar Pessoa"
-            keyExtractor={(item)=>{
-                <CardPersonal 
-                    item={item}
-                    navigation={navigation}
-                    refresh={loadPeople}
-                />
-            }}
+                title="Adicionar Pessoa"
+                onPress={() => navigation.navigate("AddEditScreen")}
+            />
+
+            <FlatList
+                data={people}
+                keyExtractor={(item) => item.id.toString()}
+                renderItem={({ item }) => (
+                    <CardPersonal 
+                        item={item}
+                        navigation={navigation}
+                        Refresh={loadPeople}
+                    />
+                )}
+                contentContainerStyle={{ paddingBottom: 20, paddingTop: 10 }}
             />
         </View>
     );

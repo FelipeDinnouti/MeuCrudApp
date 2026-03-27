@@ -1,1 +1,1 @@
-export const API_URL = "https://linkdaora.loca.lt";
+export const API_URL = "https://new-dancers-dress.loca.lt";
