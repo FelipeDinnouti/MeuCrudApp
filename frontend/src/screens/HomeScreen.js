@@ -35,12 +35,12 @@ export default function HomeScreen({ navigation }){
 
             <FlatList
                 data={people}
-                keyExtractor={(item) => item.id.toString()}
+                keyExtractor={(item) => item.id.toString()} // Key used in react's code to keep track of list items
                 renderItem={({ item }) => (
                     <CardPersonal 
                         item={item}
                         navigation={navigation}
-                        Refresh={loadPeople}
+                        refresh={loadPeople}
                     />
                 )}
                 contentContainerStyle={{ paddingBottom: 20, paddingTop: 10 }}

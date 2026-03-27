@@ -2,15 +2,22 @@ import { NavigationContainer } from '@react-navigation/native';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { createStackNavigator } from '@react-navigation/stack';
 import HomeScreen from './src/screens/HomeScreen.js';
-import AddEditScreen from './src/screens/AddEditScreen.js';
-import { View } from 'react-native-web';
+import  AddEditScreen from './src/screens/AddEditScreen.js';
 
 const Stack = createStackNavigator();
 
 export default function App() {
   return (
-    <View>
-      <Text>ASDLKJ</Text>
-    </View>
+    <GestureHandlerRootView style={{ flex: 1 }}>
+      <NavigationContainer>
+        <Stack.Navigator
+          screenOptions={{ headerShown: false }}
+          initialRouteName="HomeScreen"
+        >
+          <Stack.Screen name="HomeScreen" component={HomeScreen} />
+          <Stack.Screen name="AddEditScreen" component={AddEditScreen} />
+        </Stack.Navigator>
+      </NavigationContainer>
+    </GestureHandlerRootView>
   );
 }

@@ -3,13 +3,13 @@ import { deletePerson } from '../servers/peopleCrud';
 import { styles } from '../styles/styles';
 import { Pencil, Trash } from 'lucide-react-native';
 
-export function CardPersonal({ item, navigation, Refresh }) {
+export function CardPersonal({ item, navigation, refresh }) {
     async function Delete() {
         try {
             await deletePerson(item.id.toString());
-            Refresh();
+            refresh();
         } catch (error) {
-            console.error("Error deleting person:", error);
+            console.error("Failed to delete person: ", error);
         }
     }
     

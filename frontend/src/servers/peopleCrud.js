@@ -13,6 +13,8 @@ export async function createPerson(person) {
 
 export async function getPeople() {
     const response = await fetch(`${API_URL}/people`);
+    console.log("response>>");
+    console.log(response);
     return response.json();
 }
 

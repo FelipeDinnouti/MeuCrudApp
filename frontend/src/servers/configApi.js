@@ -1,1 +1,1 @@
-export const API_URL = "https://new-dancers-dress.loca.lt";
+export const API_URL = "http://localhost:3000";
