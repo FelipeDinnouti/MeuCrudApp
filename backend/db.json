@@ -1,20 +1,18 @@
 {
   "people": [
     {
-      "firstName": "Joao",
-      "lastName": "Carlos",
-      "email": "email",
-      "phone": "12921309213",
-      "birthDate": "2026-03-30T15:24:39.889Z",
-      "id": "xRuG_sLj7hs"
-    },
-    {
       "firstName": "Ana Beatriz",
       "lastName": "Carvalho",
       "email": "email@gmail.com",
       "phone": "120938213098",
-      "birthDate": "2026-03-30T15:36:59.448Z",
       "id": "wWOdNCtOv7k"
+    },
+    {
+      "firstName": "sad",
+      "lastName": "sdsa",
+      "email": "123@gmail.com",
+      "phone": "1230-921098123",
+      "id": "Q7rk-dji-Nc"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

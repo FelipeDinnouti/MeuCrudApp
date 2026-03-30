@@ -14,7 +14,6 @@ export default function AddEditScreen() {
     const [lastName, setLastName] = useState("");
     const [email, setEmail] = useState("");
     const [phone, setPhone] = useState("");
-    const [birthDate, setBirthDate] = useState(new Date().toISOString());
 
     const isEditing = !!id;
 
@@ -27,7 +26,6 @@ export default function AddEditScreen() {
                     setLastName(personData.lastName || "");
                     setEmail(personData.email || "");
                     setPhone(personData.phone || "");
-                    setBirthDate(personData.birthDate || new Date().toISOString());
                 } catch (error) {
                     console.error("Error loading person:", error);
                     Alert.alert("Erro", "Não foi possível carregar os dados da pessoa.");
@@ -42,8 +40,7 @@ export default function AddEditScreen() {
             firstName,
             lastName,
             email,
-            phone,
-            birthDate
+            phone
         };
 
         try {
@@ -78,6 +75,7 @@ export default function AddEditScreen() {
                         onChangeText={setFirstName}
                         style={styles.input}
                         placeholder="Ex: João"
+                        placeholderTextColor="gray"
                     />
                 </View>
 
@@ -88,6 +86,7 @@ export default function AddEditScreen() {
                         onChangeText={setLastName}
                         style={styles.input}
                         placeholder="Ex: Silva"
+                        placeholderTextColor="gray"
                     />
                 </View>
 
@@ -98,6 +97,7 @@ export default function AddEditScreen() {
                         onChangeText={setEmail}
                         style={styles.input}
                         placeholder="Ex: joao@email.com"
+                        placeholderTextColor="gray"
                         keyboardType="email-address"
                     />
                 </View>
@@ -109,25 +109,15 @@ export default function AddEditScreen() {
                         onChangeText={setPhone}
                         style={styles.input}
                         placeholder="Ex: 11999999999"
+                        placeholderTextColor="gray"
                         keyboardType="phone-pad"
-                    />
-                </View>
-
-                <View>
-                    <Text style={styles.label}>Data de nascimento: </Text>
-                    <TextInput
-                        value={birthDate}
-                        onChangeText={setBirthDate}
-                        style={styles.input}
-                        placeholder="AAAA-MM-DD"
                     />
                 </View>
             </View>
 
             <View style={styles.buttonContainer}>
                 <TouchableOpacity style={styles.saveButton} onPress={SavePerson}>
-                    <Text style={styles.buttonText}>Salvar</Text>
-                    <UserCheck size={16} color="#fff" strokeWidth={3} />
+                    <Text style={styles.buttonText}>Criar Usuário</Text>
                 </TouchableOpacity>
             </View>
         </View>

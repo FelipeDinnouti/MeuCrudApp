@@ -33,7 +33,6 @@ export function CardPersonal({ item, navigation, refresh }) {
 
             <Text><Text style={styles.subtopic}>E-mail: </Text>{item.email}</Text>
             <Text><Text style={styles.subtopic}>Telefone: </Text>{item.phone}</Text>
-            <Text><Text style={styles.subtopic}>Data de nascimento: </Text>{item.birthDate ? new Date(item.birthDate).toLocaleDateString('pt-BR') : 'N/A'}</Text>
         </View>
     )
 }

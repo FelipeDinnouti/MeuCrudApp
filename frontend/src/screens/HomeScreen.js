@@ -60,6 +60,7 @@ export default function HomeScreen({ navigation }){
                     onChangeText={setSearchQuery}
                     style={styles.input}
                     placeholder="Pesquise..."
+                    placeholderTextColor="gray"
             />
 
             <FlatList
