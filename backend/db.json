@@ -1,36 +1,21 @@
 {
   "people": [
     {
-      "firstName": "João",
-      "lastName": "Silva",
-      "email": "joao@email.com",
-      "phone": "11999999999",
-      "birthDate": "1990-01-01T12:00:00.000Z",
-      "id": "1"
-    },
-    {
-      "firstName": "",
-      "lastName": "",
-      "email": "",
-      "phone": "",
-      "birthDate": "2026-03-27T22:05:54.687Z",
-      "id": "JdGdQIcr21Q"
-    },
-    {
-      "firstName": "",
-      "lastName": "",
-      "email": "",
-      "phone": "",
-      "birthDate": "2026-03-27T22:05:56.952Z",
-      "id": "1-mPyWhHh24"
-    },
-    {
-      "firstName": "Carlos",
-      "lastName": "Antionois",
+      "firstName": "Joao",
+      "lastName": "Carlos",
       "email": "email",
-      "phone": "12938120983213809",
-      "birthDate": "2026-03-27T22:06:01.116Z",
-      "id": "qcyxLhaHVLY"
+      "phone": "12921309213",
+      "birthDate": "2026-03-30T15:24:39.889Z",
+      "id": "xRuG_sLj7hs"
+    },
+    {
+      "firstName": "Ana Beatriz",
+      "lastName": "Carvalho",
+      "email": "email@gmail.com",
+      "phone": "120938213098",
+      "birthDate": "2026-03-30T15:36:59.448Z",
+      "id": "wWOdNCtOv7k"
     }
-  ]
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }
