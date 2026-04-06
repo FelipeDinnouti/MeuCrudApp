@@ -1,8 +1,24 @@
+## O Projeto
+
+Demonstra o cadastro, visualização, edição e deleção de usuários utilizando React Native
+
+
+## Funcionalidades
+
+- Visualização 
+- Cadastro
+- Edição 
+- Deleção 
+- Busca com filtro
+- Sinalização de carregamento
+
+
 ## Instalação 
 
 É necessário instalar dependências de ambos frontend e backend. Em suas respectivas pastas, rode:
 
 ```npm install```
+
 
 ## Execução 
 
