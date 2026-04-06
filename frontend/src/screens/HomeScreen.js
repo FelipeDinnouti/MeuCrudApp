@@ -16,6 +16,7 @@ export default function HomeScreen({ navigation }){
             setPeople(data);
         } catch (error) {
             console.error("Error loading people:", error);
+            alert("Erro ao carregar usuários, verifique a conexão")
         }
     }
 
