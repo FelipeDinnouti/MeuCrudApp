@@ -1,6 +1,6 @@
 import { styles } from "../styles/styles";
 import { useEffect, useState } from "react";
-import { Text, TextInput, TouchableOpacity, View, Alert } from "react-native";
+import { Text, TextInput, TouchableOpacity, View } from "react-native";
 import { UserCheck, ArrowLeft } from "lucide-react-native";
 import { useNavigation, useRoute } from "@react-navigation/native";
 import { createPerson, getPerson, updatePerson } from "../servers/peopleCrud";
@@ -28,7 +28,7 @@ export default function AddEditScreen() {
                     setPhone(personData.phone || "");
                 } catch (error) {
                     console.error("Error loading person:", error);
-                    Alert.alert("Erro", "Não foi possível carregar os dados da pessoa.");
+                    alert("Erro", "Não foi possível carregar os dados da pessoa.");
                 }
             }
         }
@@ -46,15 +46,15 @@ export default function AddEditScreen() {
         try {
             if (isEditing) {
                 await updatePerson(personData, id);
-                Alert.alert("Sucesso", "Pessoa atualizada com sucesso!");
+                alert("Sucesso", "Pessoa atualizada com sucesso!");
             } else {
                 await createPerson(personData);
-                Alert.alert("Sucesso", "Pessoa cadastrada com sucesso!");
+                alert("Sucesso", "Pessoa cadastrada com sucesso!");
             }
             navigation.goBack();
         } catch (error) {
             console.error("Error saving person:", error);
-            Alert.alert("Erro", "Ocorreu um erro ao salvar os dados.");
+            alert("Erro", "Ocorreu um erro ao salvar os dados.");
         }
     }
 

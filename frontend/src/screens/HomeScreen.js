@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useCallback, useMemo } from "react";
-import { View, Text, FlatList, Button, StyleSheet, TextInput } from "react-native";
+import { View, Text, FlatList, Button, StyleSheet, TextInput, ActivityIndicator } from "react-native";
 import { useFocusEffect } from '@react-navigation/native';
 
 import styles from "../styles/styles";
@@ -9,10 +9,16 @@ import { CardPersonal } from "../components/cardPersonal";
 export default function HomeScreen({ navigation }){
     const [people, setPeople] = useState([]);
     const [searchQuery, setSearchQuery] = useState("");
+    const [isLoading, setIsLoading] = useState(true);
+
+    const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
     async function loadPeople() {
         try {
+            setIsLoading(true);
             const data = await getPeople();
+            await delay(2000);
+            setIsLoading(false);
             setPeople(data);
         } catch (error) {
             console.error("Error loading people:", error);
@@ -46,6 +52,13 @@ export default function HomeScreen({ navigation }){
     );
 
     return (
+        isLoading ? 
+        <View>
+            <View style={{height: 90}}></View>
+            <ActivityIndicator style={{ transform: [{ scale: 2 }] }}/> 
+        </View>
+        :
+
         <View style={styles.container}>
             <Text style={styles.title}>Pessoas</Text>
 

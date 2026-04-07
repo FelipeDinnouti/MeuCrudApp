@@ -10,6 +10,7 @@ export function CardPersonal({ item, navigation, refresh }) {
             refresh();
         } catch (error) {
             console.error("Failed to delete person: ", error);
+            alert("Erro ao deletar a pessoa. Verifique a conexão com o servidor.")
         }
     }
     
