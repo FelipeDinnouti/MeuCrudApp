@@ -34,3 +34,8 @@ Para testes, use a versão web (aperte W no terminal)
 
 Certifique que o cliente consegue acessar o backend (seja por meio de um túnel, ou só estando dentro da mesma rede)
 
+
+### Vídeo de Apresentação
+
+https://drive.google.com/file/d/1l1-jyKtuLqsytTs6Uf1oewi6THrUQ2O2/view?usp=drivesdk
+
